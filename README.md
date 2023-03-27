@@ -50,14 +50,14 @@ const PyHlk = new XPinyinSearchAndHighlightKeyword(insConfig);
 
 用于搜索，保留符合条件的数据。例如下拉选择框或列表数据的快速匹配高亮，支持拼音搜索，只会匹配第一个合法的匹配。
 ```
-PyHlk.getHighlightSearch(string, searchKeyword);
+PyHlk.search(string, searchKeyword);
 ```
 
 **文本场景**
 
 用于文本里的关键词高亮，会全局匹配。不支持拼音。
 ```
-PyHlk.hlkIns.highlight(string, searchKeyword);
+PyHlk.highlight(string, searchKeyword);
 ```
 
 | 参数  | 说明    |
