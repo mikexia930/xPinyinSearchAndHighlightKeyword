@@ -5,10 +5,10 @@
 >
 [Demo](https://mikexia930.github.io/xPinyinSearchAndHighlightKeyword/)
 
-[详细请参考Github上的示例源码](https://github.com/mikexia930/xPinyinSearchAndHighlightKeyword)
+[详细请参考示例源码](https://github.com/mikexia930/xPinyinSearchAndHighlightKeyword/blob/master/src/App.vue)
 
 ## 版本
-- v1.0.3
+- v1.0.4
 
 ## 基于
 - pinyin-match
