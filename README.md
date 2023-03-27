@@ -4,8 +4,11 @@
 >
 >
 [Demo](https://mikexia930.github.io/xPinyinSearchAndHighlightKeyword/)
+
+[详细请参考Github上的示例源码](https://github.com/mikexia930/xPinyinSearchAndHighlightKeyword)
+
 ## 版本
-- v1.0.0
+- v1.0.3
 
 ## 基于
 - pinyin-match
