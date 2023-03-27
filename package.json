@@ -1,7 +1,8 @@
 {
   "name": "x-pinyin-search-and-highlight-keyword",
-  "version": "1.0.1",
+  "version": "1.0.3",
   "private": false,
+  "homepage": "https://github.com/mikexia930/xPinyinSearchAndHighlightKeyword",
   "keywords": [
     "pinyin",
     "拼音搜索",
