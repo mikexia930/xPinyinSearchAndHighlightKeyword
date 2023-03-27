@@ -1,17 +1,31 @@
 {
-  "name": "x-highlight-search-pinyin",
-  "version": "0.1.0",
-  "private": true,
+  "name": "x-pinyin-search-and-highlight-keyword",
+  "version": "1.0.0",
+  "private": false,
+  "keywords": [
+    "pinyin",
+    "拼音搜索",
+    "highlight keyword",
+    "关键词高亮"
+  ],
+  "license": "MIT",
+  "main": "lib/xpinyinsearchandhighlightkeyword.umd.js",
+  "files": [
+    "lib/*"
+  ],
   "scripts": {
     "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build"
+    "build": "vue-cli-service build",
+    "lib": "vue-cli-service build --target lib --name xpinyinsearchandhighlightkeyword --dest lib packages/xPinyinSearchAndHighlightKeyword/src/index.js"
   },
   "dependencies": {
-    "core-js": "^3.8.3",
-    "vue": "^3.2.13",
-    "vue-class-component": "^8.0.0-0"
+    "lodash-es": "^4.17.21",
+    "pinyin-match": "^1.2.4"
   },
   "devDependencies": {
+    "vue": "^3.2.13",
+    "vue-class-component": "^8.0.0-0",
+    "core-js": "^3.8.3",
     "@vue/cli-plugin-babel": "~5.0.0",
     "@vue/cli-plugin-typescript": "~5.0.0",
     "@vue/cli-service": "~5.0.0",
