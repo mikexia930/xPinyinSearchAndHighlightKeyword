@@ -16,6 +16,28 @@ class XPinyinSearchAndHighlightKeyword {
     return PinyinMatch.match(str, keyword);
   }
 
+  escapeHtml(str) {
+    if (typeof str !== 'string') {
+      return str;
+    }
+    return str.replace(/[&<>"']/g, function (match) {
+      switch (match) {
+        case '&':
+          return '&amp;';
+        case '<':
+          return '&lt;';
+        case '>':
+          return '&gt;';
+        case '"':
+          return '&quot;';
+        case "'":
+          return '&#39;';
+        default:
+          return match;
+      }
+    });
+  }
+
   highlight(str, keyword) {
     return str.replace(
       new RegExp(escapeRegExp(keyword), 'gi'),
@@ -34,15 +56,15 @@ class XPinyinSearchAndHighlightKeyword {
       if (matchResult) {
         for (let i = 0; i < str.length; i++) {
           if (i === matchResult[0]) {
-            backStr.highlightStr += `<${this.config.tag} style="background:${this.config.color}">${str[i]}`;
+            backStr.highlightStr += `<${this.config.tag} style="background:${this.config.color}">${this.escapeHtml(str[i])}`;
             if (matchResult[0] === matchResult[1]) {
               backStr.highlightStr += `</${this.config.tag}>`;
             }
           } else if (i === matchResult[1]) {
-            backStr.highlightStr += `${str[i]}</${this.config.tag}>`;
+            backStr.highlightStr += `${this.escapeHtml(str[i])}</${this.config.tag}>`;
           }
           if (!matchResult.includes(i)) {
-            backStr.highlightStr += str[i];
+            backStr.highlightStr += this.escapeHtml(str[i]);
           }
         }
       } else {

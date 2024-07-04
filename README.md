@@ -8,7 +8,7 @@
 [详细请参考示例源码](https://github.com/mikexia930/xPinyinSearchAndHighlightKeyword/blob/master/src/App.vue)
 
 ## 版本
-- v1.0.4
+- v1.0.5
 
 ## 基于
 - pinyin-match
